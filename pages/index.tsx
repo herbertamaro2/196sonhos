@@ -72,6 +72,7 @@ export default function Home() {
           <div className="row">
             <div className='col-12 col-md-6'>
               <h2>CONHEÇA O SEU MENTOR</h2>
+              
               <h1>ANDERSON DIAS</h1>
               <p>
               Anderson Dias nasceu no Nordeste brasileiro, recordista mundial como primeiro Brasileiro a conhecer todos os países do mundo e desde muito novo sempre foi apaixonado por vendas.</p>
