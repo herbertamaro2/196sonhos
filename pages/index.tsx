@@ -36,7 +36,7 @@ export default function Home() {
 
   const scroll2El = elID => {
     window.scrollTo({
-      top: document.getElementById(elID).offsetTop - 10,
+      top: document!.getElementById(elID).offsetTop - 10,
       behavior: 'smooth',
     });
   };
