@@ -270,3 +270,51 @@ button.alert{
   font-weight: 700;
   font-size: 18px;
 }
+
+
+@media(max-width: 768px){
+  header{
+    background-position: center center;
+  }
+  .base-form{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 22px;
+  }
+  .course{
+    height: auto;
+  }
+  .course .count{
+    width: 100%;
+    margin:20px 0;
+  }
+
+  .about {
+    text-align: center;
+  }
+  .block_image img{
+    max-width: 100% !important;
+    height: auto;
+  }
+  iframe{
+    margin-top:20px;
+    max-height: 300px !important;
+  }
+  .thanks{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .alert{
+    width: 100%;
+  }
+  .aviso ul{
+    margin:0;
+    padding: 0;
+  }
+}

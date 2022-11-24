@@ -84,7 +84,7 @@ export default function Home() {
               <p>Hoje, além de empreendedor e recordista, Anderson também é mentor e já ajudou a transformar a vida e o negócio de milhares de pessoas em todo o mundo. Em breve será a sua vez!</p>
             </div>
             <div className="col-12 col-md-6 block_image">
-            <Image src={'/anderson.png'} alt={'1.9.6 Sonhos'} className="logo"  priority width={768} height={960} />
+            <Image src={'/anderson.png'} alt={'1.9.6 Sonhos'} priority width={768} height={960} />
             </div>
           </div>
         </div>
