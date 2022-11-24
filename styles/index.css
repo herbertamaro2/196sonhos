@@ -47,7 +47,53 @@
 	background: rgba(0, 0, 0, 1);
 	cursor: n-resize;
   }
- 
+  .preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 9999999999888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+  }
+  
+.box {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color:transparent;
+  height: 200px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 200px;
+}
+.bounce-7 {
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-7 {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+
+.show{
+  display: flex;
+}
+
+.hide{
+  display: none !important;
+}
 body {
   background-color: #ddd;
     margin: 0;
@@ -92,11 +138,11 @@ h3{
   font-size: 23px;
   padding: 0px 20px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 h1{
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 40px;
   margin-bottom: 20px;
   text-align: center;
@@ -125,7 +171,7 @@ h1{
 
 .base_form label{
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .base_form button{
@@ -134,6 +180,7 @@ h1{
   font-weight: bold;
   color: #000;
   transition: all ease 0.5s;
+  animation: pulse-green 2s infinite;
 }
 
 .base_form button:hover{
@@ -307,13 +354,48 @@ button.alert{
 
 
 @media(max-width: 768px){
-  header{
-    background-position: center center;
+  header {
+    background-position: -35%;
+  }
+  header .container{
+    z-index: 999;
+    position: relative;
+  }
+  .course .cont{
+    width: 100%;
+  }
+
+  header:before {
+    content: '1';
+    background: rgba(255,255,255,0.3);
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    position: absolute;
+    display: block;
+}
+
+  .footer .container{
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+
+  .footer .redes{
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .base_form {
     width: 100%;
     max-width: none;
+    margin-top: 5%;
 } 
+.base-top{
+  padding:0px;
+}
+.base-top h1{
+  margin-top: 20px;
+  line-height: 30px;
+}
 .container {
   padding: 0 15px;
 }
@@ -324,15 +406,23 @@ button.alert{
   text-align: center;
 }
 h1{
-    font-size: 30px;
+  font-size: 25px !important;
+  }
+  .base_form p {
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 24px;
+}
+  h3{
+    font-size: 18px !important;
+  }
+  .course {
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
 
-  h3{
-    font-size: 22px;
-  }
-  .course{
-    height: auto;
-  }
   .course .count{
     width: 100%;
     margin:20px 0;
@@ -359,6 +449,8 @@ h1{
   .aviso ul{
     margin:0;
     padding: 0;
+    flex-direction: column;
+    display: flex;
   }
 
  
@@ -367,7 +459,9 @@ h1{
   }
   .aviso img {
     float: left;
-    max-height: 60px;
+    height: auto;
+    width: 110px;
+    margin: 0 auto 20px auto;
 }
 }
 
@@ -418,8 +512,27 @@ h1{
   box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.05);
   border-radius: 5px;
   transition: all ease 0.5s;
+  animation: pulse-green 2s infinite;
 }
 
+
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+  }
+}
 
 .footer{
   text-align: center;
@@ -454,6 +567,10 @@ align-items:center ;
 
 .thanks h1{
   font-size: 29px;
+  font-weight: 700 !important;
+}
+.thanks h3{
+   font-weight: 500 !important;
 }
 
 .about h2{

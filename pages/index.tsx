@@ -5,12 +5,14 @@ import { useRouter } from 'next/router'
 import {IoMdClose } from 'react-icons/io';
 import {ImCheckmark} from 'react-icons/im';
 import Footer from '../components/footer';
+import Waves from '../public/Waves.svg';
 
 export default function Home() {
   const router = useRouter()
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-
+  const [nome, setNome] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [text_submit, setTextSubmit] = useState('ENTRAR PARA LISTA DE ESPERA');
+  const [loader, setLoader] = useState(true);
   const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
@@ -24,11 +26,22 @@ export default function Home() {
       }
   }
   useEffect(() => {
+   
+    setTimeout(() => {
+      setLoader(false);
+    }, 4000);
       window.addEventListener('scroll', handleScroll)
   })
 
   return (
     <div className='page'>
+        <div className={loader ? 'preloader show' : 'preloader hide'}>
+        <div className="stage">
+            <div className="box bounce-7">
+            <Image src={'/logo.svg'} alt={'1.9.6 Sonhos'} className="logo"  priority width={200} height={132} />
+            </div>
+        </div>
+        </div>
       <Head>
         <title>PROJETO 1.9.6 - 1 PROCESSO - 9 ETAPAS - 6 VITÓRIAS</title>
         <meta name="description" content="Projeto 1.9.6" />
@@ -51,10 +64,10 @@ export default function Home() {
                     
                     
                       <label>Seu nome:</label>
-                      <input type="text" className="form-control" id="nome" name="nome" />
-                      <label>Seu melhor email:</label>
-                      <input type="text" className="form-control"  id="email" name="email" />
-                      <button type="submit" className="btn btn-success w-100" onClick={function() { router.push('/obrigado') }}>ENTRAR PARA LISTA DE ESPERA</button>
+                      <input type="text" className="form-control" name="nome" placeholder='Digite seu nome'onChange={setNome} />
+                      <label>Seu email:</label>
+                      <input type="text" className="form-control" name="email" placeholder='Digite seu melhor email' onChange={setEmail}/>
+                      <button type="submit" className="btn btn-success w-100" onClick={function() { router.push('/obrigado'); setTextSubmit('Carregando...') }}>{text_submit}</button>
                 </div>
             </div>
           </div>
