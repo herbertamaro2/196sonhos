@@ -317,4 +317,22 @@ button.alert{
     margin:0;
     padding: 0;
   }
+
+  .aviso .no{
+    color: '#e74c3c'
+  }
+  .aviso .yes{
+    color: '#2ecc71'
+  }
+}
+
+.course h4{
+  font-weight: bold;
+  font-size: 21px;
+  text-align: center;
+}
+
+.course li{
+  list-style: none;
+  margin-bottom: 20px;
 }
