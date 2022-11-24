@@ -14,10 +14,10 @@ export default function Home() {
   const [text_submit, setTextSubmit] = useState('ENTRAR PARA LISTA DE ESPERA');
   const [loader, setLoader] = useState(true);
   const [scrolled, setScrolled] = React.useState(false);
+  const elID = '';
 
   const handleScroll = () => {
       const offset = window.scrollY;
-      const elID = '';
 
       if (offset > 200) {
           setScrolled(true);
