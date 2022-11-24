@@ -14,9 +14,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
       // ... other properties
-      "noImplicitAny": false
+    "noImplicitAny": false
    
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
