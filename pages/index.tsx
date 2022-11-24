@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 import {IoMdClose } from 'react-icons/io';
 import {ImCheckmark} from 'react-icons/im';
 import Footer from '../components/footer';
-import Waves from '../public/Waves.svg';
 
 export default function Home() {
   const router = useRouter()
@@ -33,6 +32,14 @@ export default function Home() {
       window.addEventListener('scroll', handleScroll)
   })
 
+  const scroll2El = elID => {
+    window.scrollTo({
+      top: document.getElementById(elID).offsetTop - 10,
+      behavior: 'smooth',
+    });
+  };
+
+
   return (
     <div className='page'>
         <div className={loader ? 'preloader show' : 'preloader hide'}>
@@ -48,7 +55,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='header' style={{ backgroundImage : "url('/196sonhos.jpg')" }}>
+      <header className='header' id="header" style={{ backgroundImage : "url('/196sonhos.jpg')" }}>
           <div className='container'>
             <div className='col-12 col-md-8 base-top'>
                 <div className="logo_block">
@@ -126,7 +133,7 @@ export default function Home() {
       </section>
 
       <section className={scrolled ? 'faixa fixed' : 'faixa'}>
-        <button className='go' onClick={function() { router.push('/obrigado') }}>ENTRAR PARA LISTA DE ESPERA</button>
+        <a className='btn btn-success go' href="/#header">ENTRAR PARA LISTA DE ESPERA</a>
       </section>
 
       <Footer />

@@ -502,7 +502,7 @@ h1{
 }
 
 
-.faixa button{
+.faixa a{
   font-weight: 700;
   background-color: #88FFCC;
   padding: 10px 5%;
@@ -513,6 +513,7 @@ h1{
   border-radius: 5px;
   transition: all ease 0.5s;
   animation: pulse-green 2s infinite;
+  color: #000000
 }
 
 
