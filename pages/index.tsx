@@ -33,9 +33,9 @@ export default function Home() {
                     <p>Basta preencher com seus dados abaixo e você terá prioridade e condições exclusivas na próxima turma do Projeto 196, o meu treinamento mais completo até hoje.</p>
                     
                     
-                      <label for="first">Seu nome:</label>
+                      <label>Seu nome:</label>
                       <input type="text" className="form-control" id="nome" name="nome" />
-                      <label for="last">Seu melhor email:</label>
+                      <label>Seu melhor email:</label>
                       <input type="text" className="form-control"  id="email" name="email" />
                       <button type="submit" className="btn btn-success w-100" onClick={function() { router.push('/obrigado') }}>ENTRAR PARA LISTA DE ESPERA</button>
                 </div>
