@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import {IoClose } from 'react-icons/im';
+import {IoMdClose } from 'react-icons/io';
+import {ImCheckmark} from 'react-icons/im';
 
 export default function Home() {
   const router = useRouter()
@@ -49,18 +50,18 @@ export default function Home() {
                   <div className="col">
                       <h4>PARA QUEM NÃO É O PROJETO 1.9.6?</h4>
                       <ul>
-                          <li><IoClose className="no" /> Para quem acha que não precisa do digital para potencializar seu negócio.</li>
-                          <li><IoClose className="no" /> Para quem não tem disposição para aplicar a metodologia ensinada.</li>
-                          <li><IoClose className="no" /> Para quem está acomodado com seus resultados atuais e não quer se esforçar para melhorar.</li>
+                          <li><IoMdClose className="no" /> Para quem acha que não precisa do digital para potencializar seu negócio.</li>
+                          <li><IoMdClose className="no" /> Para quem não tem disposição para aplicar a metodologia ensinada.</li>
+                          <li><IoMdClose className="no" /> Para quem está acomodado com seus resultados atuais e não quer se esforçar para melhorar.</li>
                       </ul>
                   </div>
 
                   <div className="col">
                        <h4>PARA QUEM É O PROJETO 1.9.6?</h4>
                        <ul>
-                          <li><ImCheckmark className="yes"> Para quem está cansado de ver outras pessoas ganhando dinheiro com o mercado digital e não vê a hora de começar a utilizar a internet para começar a vender ou aumentar suas vendas.</li>
-                          <li><ImCheckmark className="yes"> Para quem já é empreendedor em um negócio físico e quer potencializar seus produtos ou serviços através do digital.</li>
-                          <li><ImCheckmark className="yes"> Quem aspira alcançar a liberdade financeira, geográfica e de tempo através da internet mas não faz ideia de qual caminho seguir para atingir </li>
+                          <li><ImCheckmark className="yes" /> Para quem está cansado de ver outras pessoas ganhando dinheiro com o mercado digital e não vê a hora de começar a utilizar a internet para começar a vender ou aumentar suas vendas.</li>
+                          <li><ImCheckmark className="yes" /> Para quem já é empreendedor em um negócio físico e quer potencializar seus produtos ou serviços através do digital.</li>
+                          <li><ImCheckmark className="yes" /> Quem aspira alcançar a liberdade financeira, geográfica e de tempo através da internet mas não faz ideia de qual caminho seguir para atingir </li>
                         </ul>       
                   </div>
                 </div>
