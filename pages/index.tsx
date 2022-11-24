@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -35,7 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='header'>
+      <header className='header' style={{ backgroundImage : "url('/196sonhos.jpg')" }}>
           <div className='container'>
             <div className='col-12 col-md-8 base-top'>
                 <div className="logo_block">
@@ -112,7 +112,7 @@ export default function Home() {
 
       </section>
 
-      <section className={scrolled ? faixa.fixed : faixa}>
+      <section className={scrolled ? 'faixa fixed' : 'faixa'}>
         <button className='go' onClick={function() { router.push('/obrigado') }}>ENTRAR PARA LISTA DE ESPERA</button>
       </section>
 

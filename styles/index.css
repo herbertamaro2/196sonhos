@@ -64,7 +64,6 @@ body {
 }
 
 header{
-  background: url('../public/196sonhos.jpg');
   background-attachment: fixed;
   background-position: center center;
   width: 100%;
@@ -400,10 +399,12 @@ h1{
 }
 
 .faixa.fixed{
-  position: fixed;
+  transition: all ease 0.5s;
+  position: sticky;
   width: 100%;
   left: 0px;
   bottom:0px;
+  z-index: 9999999999;
 }
 
 
@@ -416,6 +417,7 @@ h1{
   -moz-box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.05);
   box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.05);
   border-radius: 5px;
+  transition: all ease 0.5s;
 }
 
 
