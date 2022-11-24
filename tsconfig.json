@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
       // ... other properties
-      "noImplicitAny": true
+      "noImplicitAny": false
    
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
