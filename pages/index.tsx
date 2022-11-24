@@ -11,6 +11,21 @@ export default function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
+  const [scrolled, setScrolled] = React.useState(false);
+
+  const handleScroll = () => {
+      const offset = window.scrollY;
+
+      if (offset > 200) {
+          setScrolled(true);
+      }
+      else {
+          setScrolled(false);
+      }
+  }
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll)
+  })
 
   return (
     <div className='page'>
@@ -97,7 +112,7 @@ export default function Home() {
 
       </section>
 
-      <section className='faixa'>
+      <section className={scrolled ? faixa.fixed : faixa}>
         <button className='go' onClick={function() { router.push('/obrigado') }}>ENTRAR PARA LISTA DE ESPERA</button>
       </section>
 

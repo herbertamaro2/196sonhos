@@ -396,7 +396,16 @@ h1{
   padding-bottom: 40px;
   text-align: center;
   background-color: #000000 !important;
+  transition: all ease 0.5s;
 }
+
+.faixa.fixed{
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom:0px;
+}
+
 
 .faixa button{
   font-weight: 700;
