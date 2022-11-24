@@ -17,6 +17,7 @@ export default function Home() {
 
   const handleScroll = () => {
       const offset = window.scrollY;
+      const elID = '';
 
       if (offset > 200) {
           setScrolled(true);
