@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import {IoMdClose } from 'react-icons/io';
 import {ImCheckmark} from 'react-icons/im';
+import Footer from '../components/footer';
 
 export default function Home() {
   const router = useRouter()
@@ -47,6 +48,9 @@ export default function Home() {
       <section  className="course">
             <div className="container">
                 <div className="cont row">
+                  <div className="col-12 text-center">
+                  <h2>O PROJETO 1.9.6</h2>
+                  </div>
                   <div className="col">
                       <h4>PARA QUEM NÃO É O PROJETO 1.9.6?</h4>
                       <ul>
@@ -96,6 +100,8 @@ export default function Home() {
       <section className='faixa'>
         <button className='go' onClick={function() { router.push('/obrigado') }}>ENTRAR PARA LISTA DE ESPERA</button>
       </section>
+
+      <Footer />
 
     </div>
   )

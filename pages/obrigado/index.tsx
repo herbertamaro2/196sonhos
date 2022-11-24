@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Footer from '../../components/footer'
 
 export default function Obrigado() {
   return (
@@ -16,7 +17,7 @@ export default function Obrigado() {
             <div className="row">
             <div className='col-12 col-md-5 text-left'>
                 <div className="logo_block">
-                  <Image src={'/logo.svg'} alt={'1.9.6 Sonhos'} className="logo"  priority width={200} height={132} />
+                  <a href="https://projeto196.com/"><Image src={'/logo.svg'} alt={'1.9.6 Sonhos'} className="logo"  priority width={200} height={132} /></a>
                 </div>
 
                 <h3>SUA INSCRIÇÃO NA LISTA DE ESPERA DA PRÓXIMA TURMA FOI CONFIRMADA COM SUCESSO!</h3>
@@ -54,7 +55,7 @@ export default function Obrigado() {
             </div>
         </section>
      
-
+    <Footer />
     </div>
   )
 }
