@@ -45,7 +45,7 @@ export default function Home() {
 
       <section  className="course">
             <div className="container">
-                <div class="cont row">
+                <div className="cont row">
                   <div className="col">
                       <h4>PARA QUEM NÃO É O PROJETO 1.9.6?</h4>
                       <ul>
