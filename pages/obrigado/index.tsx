@@ -17,7 +17,7 @@ export default function Obrigado() {
             <div className="row">
             <div className='col-12 col-md-5 text-left'>
                 <div className="logo_block">
-                  <a href="https://projeto196.com/"><Image src={'/logo.svg'} alt={'1.9.6 Sonhos'} className="logo"  priority width={200} height={132} /></a>
+                  <Link href="https://projeto196.com/"><Image src={'/logo.svg'} alt={'1.9.6 Sonhos'} className="logo"  priority width={200} height={132} /></Link>
                 </div>
 
                 <h3>SUA INSCRIÇÃO NA LISTA DE ESPERA DA PRÓXIMA TURMA FOI CONFIRMADA COM SUCESSO!</h3>

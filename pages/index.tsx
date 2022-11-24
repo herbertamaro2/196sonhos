@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import {IoMdClose } from 'react-icons/io';
 import {ImCheckmark} from 'react-icons/im';
 import Footer from '../components/footer';
+import Link from 'next/link';
 
 export default function Home() {
   const router = useRouter()
@@ -133,7 +134,7 @@ export default function Home() {
       </section>
 
       <section className={scrolled ? 'faixa fixed' : 'faixa'}>
-        <a className='btn btn-success go' href="/#header">ENTRAR PARA LISTA DE ESPERA</a>
+        <Link className='btn btn-success go' href="/#header">ENTRAR PARA LISTA DE ESPERA</Link>
       </section>
 
       <Footer />
